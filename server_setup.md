@@ -112,6 +112,26 @@ Then open a console using `psql expensus_production` and set owner to the expens
 alter database expensus_production OWNER TO expensus;
 ```
 
+#### Connecting to DB from local Datagrip
+
+Under general:
+
+```
+host: localhost  |  port: 5432
+database: expensus_production
+user: expensus
+```
+
+Under ssh/ssl:
+
+```
+proxy host: expensus.app
+proxy user: <your_name>
+auth type: Key pai (OpenSSH or PuTTY)
+private key file: /Users/<your_user>/.ssh/id_rsa (or wherever your ssh key is)
+passphrase: (if you have a key passphrase)
+```
+
 ## Installing Node via NVM
 
 ```bash
